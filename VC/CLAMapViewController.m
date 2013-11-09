@@ -70,11 +70,12 @@
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
 {
-	static NSString *annotationView = @"annotationView";
-	MKAnnotationView *aView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationView];
+	static NSString *reuseIdentifier = @"annotationView";
+	MKAnnotationView *aView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:reuseIdentifier];
 	
 	if (!aView)
-		aView = [[MKAnnotationView alloc] init];
+		aView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+											 reuseIdentifier:reuseIdentifier];
 	
 	[aView setImage:[UIImage imageNamed:@"pub.png"]];
 	
