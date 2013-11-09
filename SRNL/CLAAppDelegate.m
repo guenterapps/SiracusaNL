@@ -7,6 +7,13 @@
 //
 
 #import "CLAAppDelegate.h"
+#import <MapKit/MapKit.h>
+
+@interface CLAAppDelegate ()
+
+-(MKCoordinateRegion)regionForDictionary:(NSDictionary *)dict;
+
+@end
 
 @implementation CLAAppDelegate
 
@@ -16,6 +23,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
 
 	self.store = [[CLAPlaceStore alloc] init];
+	
+	NSDictionary *coordinates = [[NSDictionary alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"DefaultMapZone" withExtension:nil]];
 
 	//we manually load the storyboard to setup the first view controller
 	//we made the vc's semi-singleton to have a better user experience
@@ -27,16 +36,27 @@
 	self.placesTableViewController	= [(UINavigationController *)self.window.rootViewController viewControllers][0];
 	self.mapViewController			= [storyBoard instantiateViewControllerWithIdentifier:@"mapViewController"];
 	
-	[self.mapViewController loadView];
+	[self.mapViewController setRegion:[self regionForDictionary:coordinates]];
+
+	[self.window addSubview:self.mapViewController.view]; //force to load;
 	
 	self.placesTableViewController.store = self.store;
 	
 	[self.window makeKeyAndVisible];
-
 	
 	[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bigmenubck"] forBarMetrics:UIBarMetricsDefault];
+	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 	
     return YES;
+}
+
+-(MKCoordinateRegion)regionForDictionary:(NSDictionary *)dict
+{
+	MKCoordinateSpan span = MKCoordinateSpanMake([[dict objectForKey:@"latitudeDelta"] floatValue], [[dict objectForKey:@"longitudeDelta"] floatValue]);
+	
+	CLLocationCoordinate2D center = CLLocationCoordinate2DMake([[dict objectForKey:@"latitude"] floatValue], [[dict objectForKey:@"longitude"] floatValue]);
+	
+	return MKCoordinateRegionMake(center, span);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

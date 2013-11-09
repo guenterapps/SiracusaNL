@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>latitude</key>
+	<real>37.060357849187263</real>
+	<key>latitudeDelta</key>
+	<real>0.013537176513281679</real>
+	<key>longitude</key>
+	<real>15.292802513913557</real>
+	<key>longitudeDelta</key>
+	<real>0.013049121162367783</real>
+</dict>
+</plist>

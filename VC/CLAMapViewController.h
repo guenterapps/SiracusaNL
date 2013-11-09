@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface CLAMapViewController : UIViewController
+
+
+@property (nonatomic) MKCoordinateRegion region;
+
+
+-(IBAction)getZone:(id)sender;
 
 @end

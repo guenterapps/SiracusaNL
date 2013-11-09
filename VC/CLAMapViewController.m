@@ -30,6 +30,12 @@
 	[self.navigationItem setTitle:@"SIRACUSA NIGHTLIFE"];
 }
 
+
+-(void)setRegion:(MKCoordinateRegion)region
+{
+	[(MKMapView *)self.view setRegion:region];
+}
+
 -(void)toggleMap:(id)sender
 {
 
@@ -53,17 +59,24 @@
 	
 }
 
-
-- (void)viewDidLoad
+-(IBAction)getZone:(id)sender
 {
-    [super viewDidLoad];
+	NSMutableDictionary *zoneToPoint = [NSMutableDictionary dictionary];
+	
+	MKCoordinateRegion region = [(MKMapView *)self.view region];
+	
+	
+	[zoneToPoint setObject:@(region.center.longitude) forKey:@"longitude"];
+	[zoneToPoint setObject:@(region.center.latitude) forKey:@"latitude"];
+	[zoneToPoint setObject:@(region.span.latitudeDelta) forKey:@"latitudeDelta"];
+	[zoneToPoint setObject:@(region.span.longitudeDelta) forKey:@"longitudeDelta"];
+	
+	NSFileManager *fm = [NSFileManager defaultManager];
+	
+	NSURL *pathToCoord = [[[fm URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] objectAtIndex:0] URLByAppendingPathComponent:@"DefaultCoordinate"];;
+	
+	[zoneToPoint writeToURL:pathToCoord atomically:YES];
 
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

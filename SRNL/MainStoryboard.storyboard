@@ -13,18 +13,18 @@
                         <viewControllerLayoutGuide type="top" id="54j-tu-BsQ"/>
                         <viewControllerLayoutGuide type="bottom" id="2cx-25-n3t"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0xZ-NT-sCt">
+                    <view key="view" contentMode="scaleToFill" id="0xZ-NT-sCt" customClass="MKMapView">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4xi-2W-nOQ">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="OpL-Ss-GDq"/>
+                    <navigationItem key="navigationItem" id="OpL-Ss-GDq">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="ijO-ub-OfM">
+                            <connections>
+                                <action selector="getZone:" destination="7kU-hB-70R" id="maS-Q9-zdw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ah3-M4-vZG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
