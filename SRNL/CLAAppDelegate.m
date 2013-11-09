@@ -7,7 +7,6 @@
 //
 
 #import "CLAAppDelegate.h"
-#import "CLAPlacesTableViewController.h"
 
 @implementation CLAAppDelegate
 
@@ -19,13 +18,18 @@
 	self.store = [[CLAPlaceStore alloc] init];
 
 	//we manually load the storyboard to setup the first view controller
+	//we made the vc's semi-singleton to have a better user experience
+
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
 	
-	self.window.rootViewController = [storyBoard instantiateInitialViewController];
+	self.window.rootViewController	= [storyBoard instantiateInitialViewController];
 	
-	CLAPlacesTableViewController *placesVC = [(UINavigationController *)self.window.rootViewController viewControllers][0];
+	self.placesTableViewController	= [(UINavigationController *)self.window.rootViewController viewControllers][0];
+	self.mapViewController			= [storyBoard instantiateViewControllerWithIdentifier:@"mapViewController"];
 	
-	placesVC.store = self.store;
+	[self.mapViewController loadView];
+	
+	self.placesTableViewController.store = self.store;
 	
 	[self.window makeKeyAndVisible];
 

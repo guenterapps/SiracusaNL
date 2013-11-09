@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "CLAPlaceStore.h"
+#import "CLAPlacesTableViewController.h"
+#import "CLAMapViewController.h"
 
 @interface CLAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (nonatomic) CLAPlaceStore *store;
+
+@property (nonatomic) CLAMapViewController *mapViewController;
+@property (nonatomic) CLAPlacesTableViewController *placesTableViewController;
 
 @end

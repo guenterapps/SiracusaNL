@@ -37,6 +37,11 @@
 		AA5C3086182E57AE00E58FF8 /* CLAMainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C3084182E57AE00E58FF8 /* CLAMainTableViewCell.m */; };
 		AA5C3089182E609E00E58FF8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5C3088182E609E00E58FF8 /* test.jpg */; };
 		AA5C308A182E609E00E58FF8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AA5C3088182E609E00E58FF8 /* test.jpg */; };
+		AAC8FB64182E758900A94C5B /* tab_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8FB63182E758900A94C5B /* tab_pin.png */; };
+		AAC8FB65182E758900A94C5B /* tab_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8FB63182E758900A94C5B /* tab_pin.png */; };
+		AAC8FB68182E762000A94C5B /* CLAMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8FB67182E762000A94C5B /* CLAMapViewController.m */; };
+		AAC8FB69182E762000A94C5B /* CLAMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAC8FB67182E762000A94C5B /* CLAMapViewController.m */; };
+		AAC8FB6B182E898100A94C5B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8FB6A182E898100A94C5B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,10 @@
 		AA5C3083182E57AE00E58FF8 /* CLAMainTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAMainTableViewCell.h; sourceTree = "<group>"; };
 		AA5C3084182E57AE00E58FF8 /* CLAMainTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAMainTableViewCell.m; sourceTree = "<group>"; };
 		AA5C3088182E609E00E58FF8 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
+		AAC8FB63182E758900A94C5B /* tab_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_pin.png; sourceTree = "<group>"; };
+		AAC8FB66182E762000A94C5B /* CLAMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAMapViewController.h; path = VC/CLAMapViewController.h; sourceTree = "<group>"; };
+		AAC8FB67182E762000A94C5B /* CLAMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAMapViewController.m; path = VC/CLAMapViewController.m; sourceTree = "<group>"; };
+		AAC8FB6A182E898100A94C5B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC8FB6B182E898100A94C5B /* MapKit.framework in Frameworks */,
 				AA5C2FBB182E315C00E58FF8 /* CoreGraphics.framework in Frameworks */,
 				AA5C2FBD182E315C00E58FF8 /* UIKit.framework in Frameworks */,
 				AA5C2FB9182E315C00E58FF8 /* Foundation.framework in Frameworks */,
@@ -131,6 +141,7 @@
 		AA5C2FB7182E315C00E58FF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AAC8FB6A182E898100A94C5B /* MapKit.framework */,
 				AA5C2FB8182E315C00E58FF8 /* Foundation.framework */,
 				AA5C2FBA182E315C00E58FF8 /* CoreGraphics.framework */,
 				AA5C2FBC182E315C00E58FF8 /* UIKit.framework */,
@@ -197,6 +208,8 @@
 			children = (
 				AA5C3083182E57AE00E58FF8 /* CLAMainTableViewCell.h */,
 				AA5C3084182E57AE00E58FF8 /* CLAMainTableViewCell.m */,
+				AAC8FB66182E762000A94C5B /* CLAMapViewController.h */,
+				AAC8FB67182E762000A94C5B /* CLAMapViewController.m */,
 				AA5C2FF3182E396300E58FF8 /* CLAPlacesTableViewController.h */,
 				AA5C2FF4182E396300E58FF8 /* CLAPlacesTableViewController.m */,
 			);
@@ -206,6 +219,7 @@
 		AA5C3087182E5B3A00E58FF8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AAC8FB63182E758900A94C5B /* tab_pin.png */,
 				AA5C3088182E609E00E58FF8 /* test.jpg */,
 				AA5C307A182E499D00E58FF8 /* bigmenubck.png */,
 				AA5C307D182E545700E58FF8 /* background-nologo.png */,
@@ -293,6 +307,7 @@
 				AA5C3081182E545700E58FF8 /* background-nologo@2x.png in Resources */,
 				AA5C307F182E545700E58FF8 /* background-nologo.png in Resources */,
 				AA5C3089182E609E00E58FF8 /* test.jpg in Resources */,
+				AAC8FB64182E758900A94C5B /* tab_pin.png in Resources */,
 				AA5C307B182E499D00E58FF8 /* bigmenubck.png in Resources */,
 				AA5C2FF9182E44C700E58FF8 /* MainStoryboard.storyboard in Resources */,
 				AA5C2FC3182E315C00E58FF8 /* InfoPlist.strings in Resources */,
@@ -310,6 +325,7 @@
 				AA5C307C182E499D00E58FF8 /* bigmenubck.png in Resources */,
 				AA5C3082182E545700E58FF8 /* background-nologo@2x.png in Resources */,
 				AA5C3080182E545700E58FF8 /* background-nologo.png in Resources */,
+				AAC8FB65182E758900A94C5B /* tab_pin.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +337,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA5C2FEE182E33FB00E58FF8 /* CLAPlaceStore.m in Sources */,
+				AAC8FB68182E762000A94C5B /* CLAMapViewController.m in Sources */,
 				AA5C2FC5182E315C00E58FF8 /* main.m in Sources */,
 				AA5C2FC9182E315C00E58FF8 /* CLAAppDelegate.m in Sources */,
 				AA5C3085182E57AE00E58FF8 /* CLAMainTableViewCell.m in Sources */,
@@ -335,6 +352,7 @@
 			files = (
 				AA5C2FF6182E396300E58FF8 /* CLAPlacesTableViewController.m in Sources */,
 				AA5C3086182E57AE00E58FF8 /* CLAMainTableViewCell.m in Sources */,
+				AAC8FB69182E762000A94C5B /* CLAMapViewController.m in Sources */,
 				AA5C2FEA182E339000E58FF8 /* CLAPlace.m in Sources */,
 				AA5C2FEF182E33FB00E58FF8 /* CLAPlaceStore.m in Sources */,
 				AA5C2FDE182E315C00E58FF8 /* SRNLTests.m in Sources */,

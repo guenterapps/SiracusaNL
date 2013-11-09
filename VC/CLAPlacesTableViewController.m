@@ -7,7 +7,10 @@
 //
 
 #import "CLAPlacesTableViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import "CLAMainTableViewCell.h"
+#import "CLAMapViewController.h"
+#import "CLAAppDelegate.h"
 
 @interface CLAPlacesTableViewController ()
 
@@ -15,13 +18,18 @@
 
 @implementation CLAPlacesTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+-(void)awakeFromNib
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+	UIImage *pin = [UIImage imageNamed:@"tab_pin"];
+	
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, pin.size.width, pin.size.height)];
+	
+	[button setImage:[UIImage imageNamed:@"tab_pin"] forState:UIControlStateNormal];
+	[button addTarget:self action:@selector(toggleMap:) forControlEvents:UIControlEventTouchUpInside];
+	
+	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+	
+	[self.navigationItem setRightBarButtonItem:buttonItem];
 }
 
 - (void)viewDidLoad
@@ -32,8 +40,6 @@
 	
 	self.tableView.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
 	
-	//[self.tableView registerClass:[CLAMainTableViewCell class] forCellReuseIdentifier:@"CLAMainTableViewCell"];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -52,8 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return 2;
-	//return  [self.store.places count];
+	return  [self.store.places count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -75,6 +80,31 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSLog(@"Selected: %i", indexPath.row);
+}
+
+
+#pragma mark --
+#pragma mark Core methods
+
+-(void)toggleMap:(id)sender
+{
+	CLAAppDelegate *appDelegate				= (CLAAppDelegate *)[UIApplication sharedApplication].delegate;
+	
+	CLAMapViewController *mapViewController = appDelegate.mapViewController;
+
+	UINavigationController *navController = self.navigationController;
+	
+	mapViewController.view.frame = self.view.frame;
+
+	[UIView transitionFromView:self.view toView:mapViewController.view
+					  duration:0.30
+					   options:UIViewAnimationOptionTransitionFlipFromRight
+					completion:^(BOOL finished)
+					{
+						[navController setViewControllers:@[mapViewController]];
+
+					}];
+	
 }
 
 /*
