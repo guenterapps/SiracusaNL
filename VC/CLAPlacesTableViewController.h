@@ -1,5 +1,5 @@
 //
-//  CLAAppDelegate.h
+//  CLAPlacesTableViewController.h
 //  SRNL
 //
 //  Created by Christian Lao on 09/11/13.
@@ -9,9 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "CLAPlaceStore.h"
 
-@interface CLAAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@interface CLAPlacesTableViewController : UITableViewController
 
 @property (nonatomic) CLAPlaceStore *store;
 

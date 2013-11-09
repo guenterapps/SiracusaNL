@@ -7,15 +7,31 @@
 //
 
 #import "CLAAppDelegate.h"
+#import "CLAPlacesTableViewController.h"
 
 @implementation CLAAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+
+	self.store = [[CLAPlaceStore alloc] init];
+
+	//we manually load the storyboard to setup the first view controller
+	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+	
+	self.window.rootViewController = [storyBoard instantiateInitialViewController];
+	
+	CLAPlacesTableViewController *placesVC = [(UINavigationController *)self.window.rootViewController viewControllers][0];
+	
+	placesVC.store = self.store;
+	
+	[self.window makeKeyAndVisible];
+
+	
+	[[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"bigmenubck"] forBarMetrics:UIBarMetricsDefault];
+	
     return YES;
 }
 
