@@ -28,7 +28,6 @@
 
 	//we manually load the storyboard to setup the first view controller
 	//we made the vc's semi-singleton to have a better user experience
-
 	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
 	
 	self.window.rootViewController	= [storyBoard instantiateInitialViewController];
@@ -40,6 +39,8 @@
 	
 	self.placesTableViewController.store	= self.store;
 	self.mapViewController.store			= self.store;
+	
+	[self.store preloadData];
 	
 	[self.window makeKeyAndVisible];
 	
@@ -57,6 +58,9 @@
 	
 	return MKCoordinateRegionMake(center, span);
 }
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

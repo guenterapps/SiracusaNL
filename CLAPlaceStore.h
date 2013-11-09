@@ -11,6 +11,15 @@
 
 @interface CLAPlaceStore : NSObject
 
-@property (nonatomic) NSArray *places;
+
+@property (nonatomic, readonly) NSManagedObjectContext *context;
+@property (nonatomic, readonly) NSManagedObjectModel *model;
+@property (nonatomic, readonly) NSPersistentStoreCoordinator *coordinator;
+
+@property (nonatomic, readonly) NSArray *places;
+
+-(NSArray *)fetchPlaces;
+
+-(void)preloadData;
 
 @end

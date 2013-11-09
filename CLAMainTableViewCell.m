@@ -39,12 +39,4 @@
 //	_placeImage.frame = CGRectInset(self.bounds, HORIZONTAL_INSET, VERTICAL_INSET);
 //}
 
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
 @end

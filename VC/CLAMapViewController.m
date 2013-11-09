@@ -37,16 +37,14 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-	CLAPlace *place = [[CLAPlace alloc] init];
-	
-	[place setCoordinate:self.mapView.region.center];
-	[place setTitle:@"asas"];
-	[place setSubtitle:@"aa"];
-	
-	self.places = @[place];
-	
 	if (self.places)
+	{
 		[self.mapView removeAnnotations:self.places];
+	}
+	else
+	{
+		self.places = self.store.places;
+	}
 
 	[self.mapView addAnnotations:self.places];
 }

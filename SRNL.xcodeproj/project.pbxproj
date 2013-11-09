@@ -19,8 +19,6 @@
 		AA5C2FD4182E315C00E58FF8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA5C2FBC182E315C00E58FF8 /* UIKit.framework */; };
 		AA5C2FDC182E315C00E58FF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA5C2FDA182E315C00E58FF8 /* InfoPlist.strings */; };
 		AA5C2FDE182E315C00E58FF8 /* SRNLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C2FDD182E315C00E58FF8 /* SRNLTests.m */; };
-		AA5C2FE9182E339000E58FF8 /* CLAPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C2FE8182E339000E58FF8 /* CLAPlace.m */; };
-		AA5C2FEA182E339000E58FF8 /* CLAPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C2FE8182E339000E58FF8 /* CLAPlace.m */; };
 		AA5C2FEE182E33FB00E58FF8 /* CLAPlaceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C2FED182E33FB00E58FF8 /* CLAPlaceStore.m */; };
 		AA5C2FEF182E33FB00E58FF8 /* CLAPlaceStore.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C2FED182E33FB00E58FF8 /* CLAPlaceStore.m */; };
 		AA5C2FF5182E396300E58FF8 /* CLAPlacesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA5C2FF4182E396300E58FF8 /* CLAPlacesTableViewController.m */; };
@@ -47,6 +45,11 @@
 		AAC8FB70182E9E6F00A94C5B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8FB6F182E9E6F00A94C5B /* CoreLocation.framework */; };
 		AAC8FB72182EAC3D00A94C5B /* pub.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8FB71182EAC3D00A94C5B /* pub.png */; };
 		AAC8FB73182EAC3D00A94C5B /* pub.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8FB71182EAC3D00A94C5B /* pub.png */; };
+		AADAAE71182EC1D600641ECD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AADAAE6F182EC1D600641ECD /* Model.xcdatamodeld */; };
+		AADAAE72182EC1D600641ECD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AADAAE6F182EC1D600641ECD /* Model.xcdatamodeld */; };
+		AADAAE75182EC3CB00641ECD /* CLAPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = AADAAE74182EC3CB00641ECD /* CLAPlace.m */; };
+		AADAAE76182EC3CB00641ECD /* CLAPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = AADAAE74182EC3CB00641ECD /* CLAPlace.m */; };
+		AADAAE78182EC4B700641ECD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADAAE77182EC4B700641ECD /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +79,6 @@
 		AA5C2FD9182E315C00E58FF8 /* SRNLTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SRNLTests-Info.plist"; sourceTree = "<group>"; };
 		AA5C2FDB182E315C00E58FF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AA5C2FDD182E315C00E58FF8 /* SRNLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRNLTests.m; sourceTree = "<group>"; };
-		AA5C2FE7182E339000E58FF8 /* CLAPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLAPlace.h; path = Model/CLAPlace.h; sourceTree = "<group>"; };
-		AA5C2FE8182E339000E58FF8 /* CLAPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLAPlace.m; path = Model/CLAPlace.m; sourceTree = "<group>"; };
 		AA5C2FEC182E33FB00E58FF8 /* CLAPlaceStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAPlaceStore.h; sourceTree = "<group>"; };
 		AA5C2FED182E33FB00E58FF8 /* CLAPlaceStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAPlaceStore.m; sourceTree = "<group>"; };
 		AA5C2FF0182E376100E58FF8 /* CLAPlaceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CLAPlaceProtocol.h; path = Model/CLAPlaceProtocol.h; sourceTree = "<group>"; };
@@ -97,6 +98,10 @@
 		AAC8FB6C182E9C6900A94C5B /* DefaultMapZone */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DefaultMapZone; sourceTree = "<group>"; };
 		AAC8FB6F182E9E6F00A94C5B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		AAC8FB71182EAC3D00A94C5B /* pub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pub.png; sourceTree = "<group>"; };
+		AADAAE70182EC1D600641ECD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		AADAAE73182EC3CB00641ECD /* CLAPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAPlace.h; sourceTree = "<group>"; };
+		AADAAE74182EC3CB00641ECD /* CLAPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAPlace.m; sourceTree = "<group>"; };
+		AADAAE77182EC4B700641ECD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreData.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADAAE78182EC4B700641ECD /* CoreData.framework in Frameworks */,
 				AAC8FB70182E9E6F00A94C5B /* CoreLocation.framework in Frameworks */,
 				AAC8FB6B182E898100A94C5B /* MapKit.framework in Frameworks */,
 				AA5C2FBB182E315C00E58FF8 /* CoreGraphics.framework in Frameworks */,
@@ -129,8 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				AA5C2FF7182E43D300E58FF8 /* ViewControllers/Views */,
-				AA5C2FBE182E315C00E58FF8 /* SRNL */,
 				AA5C2FEB182E33D400E58FF8 /* Model */,
+				AA5C3087182E5B3A00E58FF8 /* Assets */,
+				AA5C2FBE182E315C00E58FF8 /* SRNL */,
 				AA5C2FD7182E315C00E58FF8 /* SRNLTests */,
 				AA5C2FB7182E315C00E58FF8 /* Frameworks */,
 				AA5C2FB6182E315C00E58FF8 /* Products */,
@@ -149,6 +156,7 @@
 		AA5C2FB7182E315C00E58FF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AADAAE77182EC4B700641ECD /* CoreData.framework */,
 				AAC8FB6F182E9E6F00A94C5B /* CoreLocation.framework */,
 				AAC8FB6A182E898100A94C5B /* MapKit.framework */,
 				AA5C2FB8182E315C00E58FF8 /* Foundation.framework */,
@@ -162,7 +170,6 @@
 		AA5C2FBE182E315C00E58FF8 /* SRNL */ = {
 			isa = PBXGroup;
 			children = (
-				AA5C3087182E5B3A00E58FF8 /* Assets */,
 				AA5C2FF8182E44C700E58FF8 /* MainStoryboard.storyboard */,
 				AA5C2FC7182E315C00E58FF8 /* CLAAppDelegate.h */,
 				AA5C2FC8182E315C00E58FF8 /* CLAAppDelegate.m */,
@@ -204,11 +211,12 @@
 		AA5C2FEB182E33D400E58FF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AA5C2FE7182E339000E58FF8 /* CLAPlace.h */,
 				AA5C2FF0182E376100E58FF8 /* CLAPlaceProtocol.h */,
-				AA5C2FE8182E339000E58FF8 /* CLAPlace.m */,
 				AA5C2FEC182E33FB00E58FF8 /* CLAPlaceStore.h */,
 				AA5C2FED182E33FB00E58FF8 /* CLAPlaceStore.m */,
+				AADAAE6F182EC1D600641ECD /* Model.xcdatamodeld */,
+				AADAAE73182EC3CB00641ECD /* CLAPlace.h */,
+				AADAAE74182EC3CB00641ECD /* CLAPlace.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -238,7 +246,6 @@
 				AAC8FB71182EAC3D00A94C5B /* pub.png */,
 			);
 			name = Assets;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,10 +363,11 @@
 				AA5C2FEE182E33FB00E58FF8 /* CLAPlaceStore.m in Sources */,
 				AAC8FB68182E762000A94C5B /* CLAMapViewController.m in Sources */,
 				AA5C2FC5182E315C00E58FF8 /* main.m in Sources */,
+				AADAAE71182EC1D600641ECD /* Model.xcdatamodeld in Sources */,
 				AA5C2FC9182E315C00E58FF8 /* CLAAppDelegate.m in Sources */,
 				AA5C3085182E57AE00E58FF8 /* CLAMainTableViewCell.m in Sources */,
+				AADAAE75182EC3CB00641ECD /* CLAPlace.m in Sources */,
 				AA5C2FF5182E396300E58FF8 /* CLAPlacesTableViewController.m in Sources */,
-				AA5C2FE9182E339000E58FF8 /* CLAPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,9 +378,10 @@
 				AA5C2FF6182E396300E58FF8 /* CLAPlacesTableViewController.m in Sources */,
 				AA5C3086182E57AE00E58FF8 /* CLAMainTableViewCell.m in Sources */,
 				AAC8FB69182E762000A94C5B /* CLAMapViewController.m in Sources */,
-				AA5C2FEA182E339000E58FF8 /* CLAPlace.m in Sources */,
+				AADAAE72182EC1D600641ECD /* Model.xcdatamodeld in Sources */,
 				AA5C2FEF182E33FB00E58FF8 /* CLAPlaceStore.m in Sources */,
 				AA5C2FDE182E315C00E58FF8 /* SRNLTests.m in Sources */,
+				AADAAE76182EC3CB00641ECD /* CLAPlace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +590,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AADAAE6F182EC1D600641ECD /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AADAAE70182EC1D600641ECD /* Model.xcdatamodel */,
+			);
+			currentVersion = AADAAE70182EC1D600641ECD /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AA5C2FAD182E315C00E58FF8 /* Project object */;
 }
