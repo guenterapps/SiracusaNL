@@ -21,7 +21,7 @@
 		{
 			CLAPlace *place = [[CLAPlace alloc] init];
 			
-			[place setName:[NSString stringWithFormat:@"place%i", i]];
+			[place setTitle:[NSString stringWithFormat:@"place%i", i]];
 			[place setImage:image];
 			
 			

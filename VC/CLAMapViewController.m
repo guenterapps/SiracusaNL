@@ -12,6 +12,8 @@
 
 @interface CLAMapViewController ()
 
+-(void)showDetailForPlace:(id)sender;
+
 @end
 
 @implementation CLAMapViewController
@@ -37,6 +39,8 @@
 	CLAPlace *place = [[CLAPlace alloc] init];
 	
 	[place setCoordinate:self.mapView.region.center];
+	[place setTitle:@"asas"];
+	[place setSubtitle:@"aa"];
 	
 	[self.mapView removeAnnotation:place];
 	[self.mapView addAnnotation:place];
@@ -71,19 +75,32 @@
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
 {
 	static NSString *reuseIdentifier = @"annotationView";
-	MKAnnotationView *aView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:reuseIdentifier];
+	MKAnnotationView *annotationView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:reuseIdentifier];
 	
-	if (!aView)
-		aView = [[MKAnnotationView alloc] initWithAnnotation:annotation
+	if (!annotationView)
+		annotationView = [[MKAnnotationView alloc] initWithAnnotation:annotation
 											 reuseIdentifier:reuseIdentifier];
 	
-	[aView setImage:[UIImage imageNamed:@"pub.png"]];
+	[annotationView setImage:[UIImage imageNamed:@"pub.png"]];
+	annotationView.enabled = YES;
+	annotationView.canShowCallout = YES;
 	
-	return aView;
+	UIButton *callOut = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+	[callOut addTarget:self action:@selector(showDetailForPlace:) forControlEvents:UIControlEventTouchUpInside];
+	
+	annotationView.rightCalloutAccessoryView = callOut;
+	
+	
+	return annotationView;
 }
 
 #pragma mark --
 #pragma mark helper methods
+
+-(void)showDetailForPlace:(id)sender
+{
+	NSLog(@"aasa");
+}
 
 -(MKMapView *)mapView
 {

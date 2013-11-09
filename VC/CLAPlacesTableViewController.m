@@ -72,7 +72,7 @@
 	
 	cell.backgroundColor	= [UIColor clearColor];
 	[cell setImage:[place image]];
-	[cell setName:[place name]];
+	[cell setName:[place title]];
     
     return cell;
 }
@@ -83,7 +83,7 @@
 }
 
 
-#pragma mark --
+#pragma mark -
 #pragma mark Core methods
 
 -(void)toggleMap:(id)sender
@@ -101,6 +101,7 @@
 					   options:UIViewAnimationOptionTransitionFlipFromRight
 					completion:^(BOOL finished)
 					{
+						//[mapViewController.view removeFromSuperview];
 						[navController setViewControllers:@[mapViewController]];
 
 					}];

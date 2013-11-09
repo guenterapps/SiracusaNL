@@ -37,8 +37,6 @@
 	self.mapViewController			= [storyBoard instantiateViewControllerWithIdentifier:@"mapViewController"];
 	
 	[self.mapViewController setRegion:[self regionForDictionary:coordinates]];
-
-	[self.window addSubview:self.mapViewController.view]; //force to load;
 	
 	self.placesTableViewController.store = self.store;
 	

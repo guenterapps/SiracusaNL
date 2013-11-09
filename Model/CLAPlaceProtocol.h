@@ -15,9 +15,11 @@
 -(UIImage *)image;
 -(void)setImage:(UIImage *)image;
 
--(NSString *)name;
--(void)setName:(NSString *)name;
+-(NSString *)title;
+-(void)setTitle:(NSString *)title;
 
+-(NSString *)subtitle;
+-(void)setSubtitle:(NSString *)subTitle;
 
 -(CLLocationCoordinate2D)coordinate;
 -(void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;

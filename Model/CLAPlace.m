@@ -11,14 +11,24 @@
 @implementation CLAPlace
 
 
--(NSString *)name
+-(NSString *)title
 {
-	return  [_name copy];
+	return  [_title copy];
 }
 
--(void)setName:(NSString *)name
+-(void)setTitle:(NSString *)title
 {
-	_name = [name copy];
+	_title = [title copy];
+}
+
+-(void)setSubtitle:(NSString *)subTitle
+{
+	_subTitle = [subTitle copy];
+}
+
+-(NSString *)subtitle
+{
+	return [_subTitle copy];
 }
 
 -(void)setImage:(UIImage *)image

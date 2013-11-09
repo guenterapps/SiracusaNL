@@ -13,7 +13,8 @@
 @interface CLAPlace : NSObject <CLAPlace>
 {
 	UIImage *_image;
-	NSString *_name;
+	NSString *_title;
+	NSString *_subTitle;
 	CLLocationCoordinate2D _coordinate;
 }
 
