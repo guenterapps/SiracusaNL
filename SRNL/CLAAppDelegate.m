@@ -38,7 +38,8 @@
 	
 	[self.mapViewController setRegion:[self regionForDictionary:coordinates]];
 	
-	self.placesTableViewController.store = self.store;
+	self.placesTableViewController.store	= self.store;
+	self.mapViewController.store			= self.store;
 	
 	[self.window makeKeyAndVisible];
 	

@@ -128,13 +128,12 @@
 		AA5C2FAC182E315C00E58FF8 = {
 			isa = PBXGroup;
 			children = (
-				AA5C2FF7182E43D300E58FF8 /* ViewControllers */,
+				AA5C2FF7182E43D300E58FF8 /* ViewControllers/Views */,
 				AA5C2FBE182E315C00E58FF8 /* SRNL */,
 				AA5C2FEB182E33D400E58FF8 /* Model */,
 				AA5C2FD7182E315C00E58FF8 /* SRNLTests */,
 				AA5C2FB7182E315C00E58FF8 /* Frameworks */,
 				AA5C2FB6182E315C00E58FF8 /* Products */,
-				AA5C3087182E5B3A00E58FF8 /* Assets */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +162,7 @@
 		AA5C2FBE182E315C00E58FF8 /* SRNL */ = {
 			isa = PBXGroup;
 			children = (
+				AA5C3087182E5B3A00E58FF8 /* Assets */,
 				AA5C2FF8182E44C700E58FF8 /* MainStoryboard.storyboard */,
 				AA5C2FC7182E315C00E58FF8 /* CLAAppDelegate.h */,
 				AA5C2FC8182E315C00E58FF8 /* CLAAppDelegate.m */,
@@ -213,7 +213,7 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		AA5C2FF7182E43D300E58FF8 /* ViewControllers */ = {
+		AA5C2FF7182E43D300E58FF8 /* ViewControllers/Views */ = {
 			isa = PBXGroup;
 			children = (
 				AA5C3083182E57AE00E58FF8 /* CLAMainTableViewCell.h */,
@@ -223,7 +223,7 @@
 				AA5C2FF3182E396300E58FF8 /* CLAPlacesTableViewController.h */,
 				AA5C2FF4182E396300E58FF8 /* CLAPlacesTableViewController.m */,
 			);
-			name = ViewControllers;
+			name = ViewControllers/Views;
 			sourceTree = "<group>";
 		};
 		AA5C3087182E5B3A00E58FF8 /* Assets */ = {
@@ -238,6 +238,7 @@
 				AAC8FB71182EAC3D00A94C5B /* pub.png */,
 			);
 			name = Assets;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

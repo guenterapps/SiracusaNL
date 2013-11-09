@@ -31,6 +31,7 @@
 	
 	[self.navigationItem setRightBarButtonItem:buttonItem];
 	[self.navigationItem setTitle:@"SIRACUSA NIGHTLIFE"];
+
 }
 
 
@@ -42,8 +43,12 @@
 	[place setTitle:@"asas"];
 	[place setSubtitle:@"aa"];
 	
-	[self.mapView removeAnnotation:place];
-	[self.mapView addAnnotation:place];
+	self.places = @[place];
+	
+	if (self.places)
+		[self.mapView removeAnnotations:self.places];
+
+	[self.mapView addAnnotations:self.places];
 }
 
 -(void)toggleMap:(id)sender
