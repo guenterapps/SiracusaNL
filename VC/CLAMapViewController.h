@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface CLAMapViewController : UIViewController
+@interface CLAMapViewController : UIViewController <MKMapViewDelegate>
 
 
 @property (nonatomic) MKCoordinateRegion region;
 
 
+-(MKMapView *)mapView;
 -(IBAction)getZone:(id)sender;
 
 @end

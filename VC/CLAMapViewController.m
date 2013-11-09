@@ -8,6 +8,7 @@
 
 #import "CLAMapViewController.h"
 #import "CLAAppDelegate.h"
+#import "CLAPlace.h"
 
 @interface CLAMapViewController ()
 
@@ -31,15 +32,20 @@
 }
 
 
--(void)setRegion:(MKCoordinateRegion)region
+-(void)viewDidAppear:(BOOL)animated
 {
-	[(MKMapView *)self.view setRegion:region];
+	CLAPlace *place = [[CLAPlace alloc] init];
+	
+	[place setCoordinate:self.mapView.region.center];
+	
+	[self.mapView removeAnnotation:place];
+	[self.mapView addAnnotation:place];
 }
 
 -(void)toggleMap:(id)sender
 {
 
-	CLAAppDelegate *appDelegate				= (CLAAppDelegate *)[UIApplication sharedApplication].delegate;
+	CLAAppDelegate *appDelegate	= (CLAAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 	UINavigationController *navController	= self.navigationController;
 
@@ -59,11 +65,40 @@
 	
 }
 
+#pragma mark --
+#pragma mark MKMapView delegate
+
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
+{
+	static NSString *annotationView = @"annotationView";
+	MKAnnotationView *aView = [self.mapView dequeueReusableAnnotationViewWithIdentifier:annotationView];
+	
+	if (!aView)
+		aView = [[MKAnnotationView alloc] init];
+	
+	[aView setImage:[UIImage imageNamed:@"pub.png"]];
+	
+	return aView;
+}
+
+#pragma mark --
+#pragma mark helper methods
+
+-(MKMapView *)mapView
+{
+	return (MKMapView *)self.view;
+}
+
+-(void)setRegion:(MKCoordinateRegion)region
+{
+	[self.mapView setRegion:region];
+}
+
 -(IBAction)getZone:(id)sender
 {
 	NSMutableDictionary *zoneToPoint = [NSMutableDictionary dictionary];
 	
-	MKCoordinateRegion region = [(MKMapView *)self.view region];
+	MKCoordinateRegion region = [self.mapView region];
 	
 	
 	[zoneToPoint setObject:@(region.center.longitude) forKey:@"longitude"];

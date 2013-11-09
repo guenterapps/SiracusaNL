@@ -31,4 +31,14 @@
 	return _image;
 }
 
+-(void)setCoordinate:(CLLocationCoordinate2D)newCoordinate
+{
+	_coordinate = newCoordinate;
+}
+
+-(CLLocationCoordinate2D)coordinate
+{
+	return _coordinate;
+}
+
 @end

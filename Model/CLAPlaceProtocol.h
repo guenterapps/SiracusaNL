@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@protocol CLAPlace <NSObject>
+@protocol CLAPlace <MKAnnotation>
 
 -(UIImage *)image;
 -(void)setImage:(UIImage *)image;
@@ -16,5 +18,8 @@
 -(NSString *)name;
 -(void)setName:(NSString *)name;
 
+
+-(CLLocationCoordinate2D)coordinate;
+-(void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 
 @end

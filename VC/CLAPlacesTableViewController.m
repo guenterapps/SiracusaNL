@@ -88,7 +88,7 @@
 
 -(void)toggleMap:(id)sender
 {
-	CLAAppDelegate *appDelegate				= (CLAAppDelegate *)[UIApplication sharedApplication].delegate;
+	CLAAppDelegate *appDelegate	= (CLAAppDelegate *)[UIApplication sharedApplication].delegate;
 	
 	CLAMapViewController *mapViewController = appDelegate.mapViewController;
 

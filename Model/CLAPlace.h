@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "CLAPlaceProtocol.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface CLAPlace : NSObject <CLAPlace>
 {
 	UIImage *_image;
 	NSString *_name;
+	CLLocationCoordinate2D _coordinate;
 }
 
 
