@@ -20,8 +20,4 @@
 
 -(MKMapView *)mapView;
 
-
-//to be removed
--(IBAction)getZone:(id)sender;
-
 @end

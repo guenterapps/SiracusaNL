@@ -12,7 +12,10 @@
 
 @interface CLAMapViewController ()
 
+-(void)toggleTable:(id)sender;
 -(void)showDetailForPlace:(id)sender;
+
+-(IBAction)getZone:(id)sender;
 
 @end
 
@@ -25,7 +28,7 @@
 	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, pin.size.width, pin.size.height)];
 	
 	[button setImage:[UIImage imageNamed:@"tab_pin"] forState:UIControlStateNormal];
-	[button addTarget:self action:@selector(toggleMap:) forControlEvents:UIControlEventTouchUpInside];
+	[button addTarget:self action:@selector(toggleTable:) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
 	
@@ -49,7 +52,7 @@
 	[self.mapView addAnnotations:self.places];
 }
 
--(void)toggleMap:(id)sender
+-(void)toggleTable:(id)sender
 {
 
 	CLAAppDelegate *appDelegate	= (CLAAppDelegate *)[UIApplication sharedApplication].delegate;
