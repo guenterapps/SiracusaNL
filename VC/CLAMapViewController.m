@@ -15,6 +15,8 @@
 -(void)toggleTable:(id)sender;
 -(void)showDetailForPlace:(id)sender;
 
+-(void)navigateToDetail:(NSTimer *)sender;
+
 -(IBAction)getZone:(id)sender;
 
 @end
@@ -36,6 +38,15 @@
 	[self.navigationItem setTitle:@"SIRACUSA NIGHTLIFE"];
 
 }
+
+-(void)setRegion:(MKCoordinateRegion)region navigateToDetailMap:(BOOL)navigate
+{
+	self.navigateToDetailMap = navigate;
+	
+	[self.mapView setRegion:region];
+}
+
+#pragma mark view lifecycle
 
 -(void)viewDidLoad
 {
@@ -62,6 +73,19 @@
 	}
 
 	[self.mapView addAnnotations:self.places];
+	
+	if (self.navigateToDetailMap)
+	{
+		[NSTimer scheduledTimerWithTimeInterval:0.50 target:self selector:@selector(navigateToDetail:) userInfo:nil repeats:NO];
+	}
+}
+
+-(void)navigateToDetail:(NSTimer *)sender
+{
+	CLAPlace *place = [self.places lastObject];
+	MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(place.coordinate, 500, 500);
+	
+	[self.mapView setRegion:region animated:YES];
 }
 
 -(void)toggleTable:(id)sender

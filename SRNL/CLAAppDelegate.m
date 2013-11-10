@@ -25,6 +25,10 @@
 	self.store = [[CLAPlaceStore alloc] init];
 	
 	NSDictionary *coordinates = [[NSDictionary alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"DefaultMapZone" withExtension:nil]];
+	
+	NSDictionary *italia = [[NSDictionary alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"italia" withExtension:nil]];
+	
+	self.italia = [self regionForDictionary:italia];
 
 	//we manually load the storyboard to setup the first view controller
 	//we made the vc's semi-singleton to have a better user experience

@@ -20,4 +20,6 @@
 @property (nonatomic) CLAMapViewController *mapViewController;
 @property (nonatomic) CLAPlacesTableViewController *placesTableViewController;
 
+@property (nonatomic) MKCoordinateRegion italia;
+
 @end

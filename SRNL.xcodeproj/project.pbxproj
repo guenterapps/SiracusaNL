@@ -161,6 +161,8 @@
 		AADAAF15182F985C00641ECD /* arrowMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF11182F985C00641ECD /* arrowMap@2x.png */; };
 		AAF525FC182FCB67001DB7AF /* UIViewController+CommonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF525FB182FCB67001DB7AF /* UIViewController+CommonUtilities.m */; };
 		AAF525FD182FCB67001DB7AF /* UIViewController+CommonUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF525FB182FCB67001DB7AF /* UIViewController+CommonUtilities.m */; };
+		AAF525FF182FCF60001DB7AF /* italia in Resources */ = {isa = PBXBuildFile; fileRef = AAF525FE182FCF60001DB7AF /* italia */; };
+		AAF52600182FCF60001DB7AF /* italia in Resources */ = {isa = PBXBuildFile; fileRef = AAF525FE182FCF60001DB7AF /* italia */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -272,6 +274,7 @@
 		AADAAF11182F985C00641ECD /* arrowMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowMap@2x.png"; sourceTree = "<group>"; };
 		AAF525FA182FCB67001DB7AF /* UIViewController+CommonUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+CommonUtilities.h"; path = "VC/UIViewController+CommonUtilities.h"; sourceTree = SOURCE_ROOT; };
 		AAF525FB182FCB67001DB7AF /* UIViewController+CommonUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+CommonUtilities.m"; path = "VC/UIViewController+CommonUtilities.m"; sourceTree = SOURCE_ROOT; };
+		AAF525FE182FCF60001DB7AF /* italia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = italia; path = SRNL/italia; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +386,8 @@
 		AA5C2FEB182E33D400E58FF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AAC8FB6C182E9C6900A94C5B /* DefaultMapZone */,
+				AAF525FE182FCF60001DB7AF /* italia */,
 				AA5C2FF0182E376100E58FF8 /* CLAPlaceProtocol.h */,
 				AA5C2FEC182E33FB00E58FF8 /* CLAPlaceStore.h */,
 				AA5C2FED182E33FB00E58FF8 /* CLAPlaceStore.m */,
@@ -448,7 +453,6 @@
 				AADAAF09182F875D00641ECD /* backbtm@2x.png */,
 				AADAAE7F182F859000641ECD /* phone.png */,
 				AADAAE80182F859000641ECD /* phone@2x.png */,
-				AAC8FB6C182E9C6900A94C5B /* DefaultMapZone */,
 				AAC8FB63182E758900A94C5B /* tab_pin.png */,
 				AA5C3088182E609E00E58FF8 /* test.jpg */,
 				AA5C307A182E499D00E58FF8 /* bigmenubck.png */,
@@ -562,6 +566,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF525FF182FCF60001DB7AF /* italia in Resources */,
 				AADAAEED182F86CF00641ECD /* buttonsBack-single.png in Resources */,
 				AADAAEB3182F85D400641ECD /* 12.jpg in Resources */,
 				AADAAEFF182F871500641ECD /* sega@2x.png in Resources */,
@@ -685,6 +690,7 @@
 				AADAAEA0182F85D400641ECD /* 2.jpg in Resources */,
 				AADAAEFE182F871500641ECD /* sega.png in Resources */,
 				AAC8FB65182E758900A94C5B /* tab_pin.png in Resources */,
+				AAF52600182FCF60001DB7AF /* italia in Resources */,
 				AADAAECE182F860700641ECD /* email.png in Resources */,
 				AADAAE9E182F85D400641ECD /* 1.jpg in Resources */,
 				AADAAF04182F873200641ECD /* get-directions.png in Resources */,

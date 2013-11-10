@@ -11,6 +11,7 @@
 
 #import "CLADetailViewController.h"
 #import "CLAMapViewController.h"
+#include "CLAAppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface CLADetailViewController ()
@@ -73,9 +74,10 @@
 	{
 		CLAMapViewController *mapVC = (CLAMapViewController *)[segue destinationViewController];
 		
+		MKCoordinateRegion italia = [(CLAAppDelegate *)[UIApplication sharedApplication].delegate italia];
+		
 		[mapVC setPlaces:@[self.place]];
-		//[mapVC setRegion:nil];
-		[mapVC setNavigateToDetailMap:YES];
+		[mapVC setRegion:italia navigateToDetailMap:YES];
 	}
 }
 

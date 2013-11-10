@@ -22,4 +22,6 @@
 
 -(MKMapView *)mapView;
 
+-(void)setRegion:(MKCoordinateRegion)region navigateToDetailMap:(BOOL)navigate;
+
 @end
