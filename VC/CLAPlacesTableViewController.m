@@ -21,11 +21,11 @@
 
 -(void)awakeFromNib
 {
-	UIImage *pin = [UIImage imageNamed:@"tab_pin"];
+	UIImage *pin = [UIImage imageNamed:@"iconmap"];
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0.0, 0.0, 52, 46)];
 	
-	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, pin.size.width, pin.size.height)];
-	
-	[button setImage:[UIImage imageNamed:@"tab_pin"] forState:UIControlStateNormal];
+	[button setImage:pin forState:UIControlStateNormal];
+	[button setContentMode:UIViewContentModeCenter];
 	[button addTarget:self action:@selector(toggleMap:) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:button];

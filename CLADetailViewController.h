@@ -11,7 +11,7 @@
 #import "CLAPlace.h"
 
 
-@interface CLADetailViewController : UITableViewController <MFMailComposeViewControllerDelegate, UITableViewDelegate>
+@interface CLADetailViewController : UITableViewController <MFMailComposeViewControllerDelegate, UITableViewDelegate, UIActionSheetDelegate>
 
 @property (nonatomic) CLAPlace *place;
 

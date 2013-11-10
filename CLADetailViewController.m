@@ -14,21 +14,31 @@
 
 @interface CLADetailViewController ()
 
+-(void)popViewController:(id)sender;
+-(void)showSheet:(id)sender;
+
 @end
 
 @implementation CLADetailViewController
 
 -(void)awakeFromNib
 {
-	UIImage *pin = [UIImage imageNamed:@"tab_pin"];
+	UIImage *detail = [UIImage imageNamed:@"detaildisclosure"];
+	UIImage *leftArrow = [UIImage imageNamed:@"backbtm"];
 	
-	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, pin.size.width, pin.size.height)];
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 46)];
+	UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 46)];
 	
-	[button setImage:[UIImage imageNamed:@"tab_pin"] forState:UIControlStateNormal];
-	//[button addTarget:self action:@selector(toggleMap:) forControlEvents:UIControlEventTouchUpInside];
+	[button setImage:detail forState:UIControlStateNormal];
+	[button addTarget:self action:@selector(showSheet:) forControlEvents:UIControlEventTouchUpInside];
+	
+	[backButton setImage:leftArrow forState:UIControlStateNormal];
+	[backButton addTarget:self action:@selector(popViewController:) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+	UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
 	
+	[self.navigationItem setLeftBarButtonItem:backItem];
 	[self.navigationItem setRightBarButtonItem:buttonItem];
 }
 
@@ -49,6 +59,8 @@
 -(void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
+	
+	self.navigationItem.title = self.place.title;
 	
 	self.imageDetail.image = self.place.image;
 	
@@ -125,6 +137,37 @@
 	return height;
 }
 
+
+#pragma mark custom 
+
+-(void)popViewController:(id)sender
+{
+	[self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)showSheet:(id)sender
+{
+	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil
+													   delegate:nil
+											  cancelButtonTitle:@"Annulla"
+										 destructiveButtonTitle:nil
+											  otherButtonTitles:@"Copia dettagli", nil];
+	
+	[sheet setDelegate:self];
+	[sheet showInView:self.view];
+	
+	
+}
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+	if (buttonIndex == 0)
+	{
+		NSString *stringToCopy = [NSString stringWithFormat:@"%@ - @ %@", self.place.title, self.place.subtitle];
+		
+		[[UIPasteboard generalPasteboard] setString:stringToCopy];
+	}
+}
 
 /*
 // Override to support conditional editing of the table view.

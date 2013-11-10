@@ -23,11 +23,11 @@
 
 -(void)awakeFromNib
 {
-	UIImage *pin = [UIImage imageNamed:@"tab_pin"];
+	UIImage *list = [UIImage imageNamed:@"listicon"];
 	
-	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, pin.size.width, pin.size.height)];
+	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 46)];
 	
-	[button setImage:[UIImage imageNamed:@"tab_pin"] forState:UIControlStateNormal];
+	[button setImage:list forState:UIControlStateNormal];
 	[button addTarget:self action:@selector(toggleTable:) forControlEvents:UIControlEventTouchUpInside];
 	
 	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:button];

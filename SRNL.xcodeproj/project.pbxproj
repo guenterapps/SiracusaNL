@@ -45,6 +45,12 @@
 		AAC8FB70182E9E6F00A94C5B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAC8FB6F182E9E6F00A94C5B /* CoreLocation.framework */; };
 		AAC8FB72182EAC3D00A94C5B /* pub.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8FB71182EAC3D00A94C5B /* pub.png */; };
 		AAC8FB73182EAC3D00A94C5B /* pub.png in Resources */ = {isa = PBXBuildFile; fileRef = AAC8FB71182EAC3D00A94C5B /* pub.png */; };
+		AAD47041182FB46B008F785E /* iconmap.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD4703F182FB46B008F785E /* iconmap.png */; };
+		AAD47042182FB46B008F785E /* iconmap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD47040182FB46B008F785E /* iconmap@2x.png */; };
+		AAD47045182FB492008F785E /* listicon.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD47043182FB492008F785E /* listicon.png */; };
+		AAD47046182FB492008F785E /* listicon.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD47043182FB492008F785E /* listicon.png */; };
+		AAD47047182FB492008F785E /* listicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD47044182FB492008F785E /* listicon@2x.png */; };
+		AAD47048182FB492008F785E /* listicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AAD47044182FB492008F785E /* listicon@2x.png */; };
 		AADAAE71182EC1D600641ECD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AADAAE6F182EC1D600641ECD /* Model.xcdatamodeld */; };
 		AADAAE72182EC1D600641ECD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AADAAE6F182EC1D600641ECD /* Model.xcdatamodeld */; };
 		AADAAE75182EC3CB00641ECD /* CLAPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = AADAAE74182EC3CB00641ECD /* CLAPlace.m */; };
@@ -201,6 +207,10 @@
 		AAC8FB6C182E9C6900A94C5B /* DefaultMapZone */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = DefaultMapZone; sourceTree = "<group>"; };
 		AAC8FB6F182E9E6F00A94C5B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		AAC8FB71182EAC3D00A94C5B /* pub.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pub.png; sourceTree = "<group>"; };
+		AAD4703F182FB46B008F785E /* iconmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconmap.png; sourceTree = "<group>"; };
+		AAD47040182FB46B008F785E /* iconmap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iconmap@2x.png"; sourceTree = "<group>"; };
+		AAD47043182FB492008F785E /* listicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = listicon.png; sourceTree = "<group>"; };
+		AAD47044182FB492008F785E /* listicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "listicon@2x.png"; sourceTree = "<group>"; };
 		AADAAE70182EC1D600641ECD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		AADAAE73182EC3CB00641ECD /* CLAPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLAPlace.h; sourceTree = "<group>"; };
 		AADAAE74182EC3CB00641ECD /* CLAPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLAPlace.m; sourceTree = "<group>"; };
@@ -397,6 +407,10 @@
 		AA5C3087182E5B3A00E58FF8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				AAD4703F182FB46B008F785E /* iconmap.png */,
+				AAD47043182FB492008F785E /* listicon.png */,
+				AAD47044182FB492008F785E /* listicon@2x.png */,
+				AAD47040182FB46B008F785E /* iconmap@2x.png */,
 				AADAAF07182F873A00641ECD /* DATA */,
 				AADAAED1182F866C00641ECD /* newMapIcon.png */,
 				AADAAF10182F985C00641ECD /* arrowMap.png */,
@@ -559,6 +573,7 @@
 				AADAAF12182F985C00641ECD /* arrowMap.png in Resources */,
 				AADAAEBD182F85D400641ECD /* 17.jpg in Resources */,
 				AAC8FB72182EAC3D00A94C5B /* pub.png in Resources */,
+				AAD47047182FB492008F785E /* listicon@2x.png in Resources */,
 				AADAAEA9182F85D400641ECD /* 7.jpg in Resources */,
 				AADAAEE3182F86B600641ECD /* blackArrow@2x.png in Resources */,
 				AADAAF0C182F875D00641ECD /* backbtm@2x.png in Resources */,
@@ -568,7 +583,9 @@
 				AA5C3089182E609E00E58FF8 /* test.jpg in Resources */,
 				AAC8FB6D182E9C6900A94C5B /* DefaultMapZone in Resources */,
 				AADAAECB182F860700641ECD /* email-ko@2x.png in Resources */,
+				AAD47042182FB46B008F785E /* iconmap@2x.png in Resources */,
 				AADAAEBB182F85D400641ECD /* 16.jpg in Resources */,
+				AAD47041182FB46B008F785E /* iconmap.png in Resources */,
 				AADAAEF9182F86EE00641ECD /* detaildisclosure@2x.png in Resources */,
 				AADAAEB7182F85D400641ECD /* 14.jpg in Resources */,
 				AADAAEB5182F85D400641ECD /* 13.jpg in Resources */,
@@ -576,6 +593,7 @@
 				AADAAEF1182F86CF00641ECD /* buttonsBack.png in Resources */,
 				AADAAEB9182F85D400641ECD /* 15.jpg in Resources */,
 				AADAAEE7182F86B600641ECD /* blueArrow@2x.png in Resources */,
+				AAD47045182FB492008F785E /* listicon.png in Resources */,
 				AADAAEA1182F85D400641ECD /* 3.jpg in Resources */,
 				AADAAE9F182F85D400641ECD /* 2.jpg in Resources */,
 				AADAAEF7182F86EE00641ECD /* detaildisclosure.png in Resources */,
@@ -643,8 +661,10 @@
 				AADAAEE2182F86B600641ECD /* blackArrow.png in Resources */,
 				AADAAEE4182F86B600641ECD /* blackArrow@2x.png in Resources */,
 				AADAAF15182F985C00641ECD /* arrowMap@2x.png in Resources */,
+				AAD47048182FB492008F785E /* listicon@2x.png in Resources */,
 				AADAAEAE182F85D400641ECD /* 9.jpg in Resources */,
 				AADAAEA4182F85D400641ECD /* 4.jpg in Resources */,
+				AAD47046182FB492008F785E /* listicon.png in Resources */,
 				AADAAEA2182F85D400641ECD /* 3.jpg in Resources */,
 				AADAAEB2182F85D400641ECD /* 11.jpg in Resources */,
 				AADAAF0D182F875D00641ECD /* backbtm@2x.png in Resources */,
