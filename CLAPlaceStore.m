@@ -65,20 +65,27 @@
 		[place setTitle:[NSString stringWithFormat:@"Baretto %i", i]];
 		[place setSubtitle:[NSString stringWithFormat:@"Piazza Duomo %i", i]];
 		
-		
-		
 		[place setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%i.jpg", i]]];
 
 		double delta = rand() % 999999;
 		
 		int sign = (delta - 555555) > 0 ? 1 : -1;
 		
+		NSString *descText = @"Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+		
 		if (sign > 0)
 		{
 			[place setEmail:@"mail@mail.it"];
 			[place setPhoneNumber:@"09318723729"];
+			
+			place.descText = descText;
 		}
+		else
+		{
+			place.descText = [NSString stringWithFormat:@"%@\n%@", descText, descText];
 		
+		}
+
 		double latitude = 37.060357849187263 + sign * (delta * pow(10, -9));
 		double longitude = 15.292802513913557 + sign * (delta * pow(10, -9));
 

@@ -185,25 +185,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfv-Cc-HQe">
-                                                    <rect key="frame" x="7" y="5" width="306" height="132"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Testo" translatesAutoresizingMaskIntoConstraints="NO" id="uar-bW-ot5">
+                                                    <rect key="frame" x="7" y="5" width="306" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sega.png" translatesAutoresizingMaskIntoConstraints="NO" id="djP-V3-yS6">
-                                                            <rect key="frame" x="0.0" y="60" width="306" height="12"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                        </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Testo" translatesAutoresizingMaskIntoConstraints="NO" id="uar-bW-ot5">
-                                                            <rect key="frame" x="0.0" y="0.0" width="306" height="90"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                                </view>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sega.png" translatesAutoresizingMaskIntoConstraints="NO" id="djP-V3-yS6">
+                                                    <rect key="frame" x="7" y="133" width="306" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="djP-V3-yS6" secondAttribute="bottom" constant="5" id="3YF-sw-E7E"/>
+                                                <constraint firstAttribute="trailing" secondItem="djP-V3-yS6" secondAttribute="trailing" constant="7" id="Gdw-vb-S8P"/>
+                                                <constraint firstAttribute="bottom" secondItem="uar-bW-ot5" secondAttribute="bottom" constant="17" id="K1I-dk-TMS"/>
+                                                <constraint firstItem="uar-bW-ot5" firstAttribute="leading" secondItem="UG0-ST-z5t" secondAttribute="leading" constant="7" id="KJW-Mu-zaE"/>
+                                                <constraint firstItem="uar-bW-ot5" firstAttribute="top" secondItem="UG0-ST-z5t" secondAttribute="top" constant="5" id="m8p-YC-462"/>
+                                                <constraint firstItem="djP-V3-yS6" firstAttribute="leading" secondItem="UG0-ST-z5t" secondAttribute="leading" constant="7" id="mLA-tU-c7y"/>
+                                                <constraint firstAttribute="trailing" secondItem="uar-bW-ot5" secondAttribute="trailing" constant="7" id="ppl-2M-LF5"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.1307020093392034" blue="0.14112987130520716" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>

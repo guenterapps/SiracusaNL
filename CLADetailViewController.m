@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Christian Lao. All rights reserved.
 //
 
+#define MARGIN 5
+#define SAWTOOTH_HEIGHT 12
+
 #import "CLADetailViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -65,6 +68,7 @@
 	
 	self.address.text = self.place.subtitle;
 	self.distance.text = @"55 km";
+	self.descText.text = self.place.descText;
 }
 
 
@@ -100,8 +104,10 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
-	CGFloat height = 0.0;
-	CGRect a;
+	//needed to handle variable height desc text
+	
+	CGFloat height;
+	
 	switch (indexPath.row)
 	{
 		case 0:
@@ -111,15 +117,9 @@
 			height = 55.0;
 			break;
 		case 2:
-			a = [self.descText frame];
-			
-			[self.descText setText:@""];
-			
-			//[self.descText setFrame:CGRectMake(a.origin.x, a.origin.y, a.size.width, 200.0)];
-			height = 150.0;
+			height =  (SAWTOOTH_HEIGHT + (2 * MARGIN) + self.descText.contentSize.height);
 			break;
-		default:
-			break;
+
 	}
 	
 	return height;
