@@ -7,10 +7,14 @@
 //
 
 #import "CLAMapViewController.h"
+#import "CLADetailViewController.h"
 #import "CLAAppDelegate.h"
 #import "CLAPlace.h"
 
 @interface CLAMapViewController ()
+{
+	CLAPlace *_placeToShowDetail;
+}
 
 -(void)toggleTable:(id)sender;
 -(void)showDetailForPlace:(id)sender;
@@ -140,12 +144,26 @@
 	return annotationView;
 }
 
-#pragma mark --
+#pragma mark storyboard methods
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([@"showDetailFromMap" isEqualToString:[segue identifier]])
+	{
+		CLADetailViewController *detailVC = (CLADetailViewController *)[segue destinationViewController];
+		
+		[detailVC setPlace:_placeToShowDetail];
+	}
+}
+
+#pragma mark -
 #pragma mark helper methods
 
 -(void)showDetailForPlace:(id)sender
 {
-	NSLog(@"aasa");
+	_placeToShowDetail =  (CLAPlace *)[[self.mapView selectedAnnotations]lastObject];
+	
+	[self performSegueWithIdentifier:@"showDetailFromMap" sender:self];
 }
 
 -(MKMapView *)mapView
