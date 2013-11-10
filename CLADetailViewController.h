@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 #import "CLAPlace.h"
+#import "UIViewController+CommonUtilities.h"
 
 
 @interface CLADetailViewController : UITableViewController <MFMailComposeViewControllerDelegate, UITableViewDelegate, UIActionSheetDelegate>

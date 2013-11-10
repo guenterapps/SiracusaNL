@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "CLAPlaceStore.h"
+#import "UIViewController+CommonUtilities.h"
 
 @interface CLAMapViewController : UIViewController <MKMapViewDelegate>
 
@@ -16,6 +17,7 @@
 @property (nonatomic) MKCoordinateRegion region;
 @property (nonatomic) CLAPlaceStore *store;
 @property (nonatomic) NSArray *places;
+@property (nonatomic) BOOL navigateToDetailMap;
 
 
 -(MKMapView *)mapView;

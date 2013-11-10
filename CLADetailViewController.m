@@ -10,12 +10,10 @@
 #define SAWTOOTH_HEIGHT 12
 
 #import "CLADetailViewController.h"
+#import "CLAMapViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface CLADetailViewController ()
-
--(void)popViewController:(id)sender;
--(void)showSheet:(id)sender;
 
 @end
 
@@ -23,23 +21,7 @@
 
 -(void)awakeFromNib
 {
-	UIImage *detail = [UIImage imageNamed:@"detaildisclosure"];
-	UIImage *leftArrow = [UIImage imageNamed:@"backbtm"];
-	
-	UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 46)];
-	UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 52, 46)];
-	
-	[button setImage:detail forState:UIControlStateNormal];
-	[button addTarget:self action:@selector(showSheet:) forControlEvents:UIControlEventTouchUpInside];
-	
-	[backButton setImage:leftArrow forState:UIControlStateNormal];
-	[backButton addTarget:self action:@selector(popViewController:) forControlEvents:UIControlEventTouchUpInside];
-	
-	UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-	UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
-	
-	[self.navigationItem setLeftBarButtonItem:backItem];
-	[self.navigationItem setRightBarButtonItem:buttonItem];
+	[self setupBackAndDisclosure];
 }
 
 
@@ -83,6 +65,19 @@
 	self.descText.text = self.place.descText;
 }
 
+#pragma mark StoryBoard methods
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([@"showMapDetail" isEqualToString:[segue identifier]])
+	{
+		CLAMapViewController *mapVC = (CLAMapViewController *)[segue destinationViewController];
+		
+		[mapVC setPlaces:@[self.place]];
+		//[mapVC setRegion:nil];
+		[mapVC setNavigateToDetailMap:YES];
+	}
+}
 
 #pragma mark Mail & Phone
 
@@ -138,26 +133,7 @@
 }
 
 
-#pragma mark custom 
-
--(void)popViewController:(id)sender
-{
-	[self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)showSheet:(id)sender
-{
-	UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil
-													   delegate:nil
-											  cancelButtonTitle:@"Annulla"
-										 destructiveButtonTitle:nil
-											  otherButtonTitles:@"Copia dettagli", nil];
-	
-	[sheet setDelegate:self];
-	[sheet showInView:self.view];
-	
-	
-}
+#pragma mark custom methods
 
 -(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {

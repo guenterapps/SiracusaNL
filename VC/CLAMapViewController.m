@@ -40,6 +40,11 @@
 -(void)viewDidLoad
 {
 	[super viewDidLoad];
+	
+	if (self.navigateToDetailMap)
+	{
+		[self setupBackAndDisclosure];
+	}
 }
 
 
@@ -95,13 +100,17 @@
 											 reuseIdentifier:reuseIdentifier];
 	
 	[annotationView setImage:[UIImage imageNamed:@"pub.png"]];
-	annotationView.enabled = YES;
-	annotationView.canShowCallout = YES;
 	
-	UIButton *callOut = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-	[callOut addTarget:self action:@selector(showDetailForPlace:) forControlEvents:UIControlEventTouchUpInside];
+	if (!self.navigateToDetailMap)
+	{
+		annotationView.enabled = YES;
+		annotationView.canShowCallout = YES;
 	
-	annotationView.rightCalloutAccessoryView = callOut;
+		UIButton *callOut = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+		[callOut addTarget:self action:@selector(showDetailForPlace:) forControlEvents:UIControlEventTouchUpInside];
+	
+		annotationView.rightCalloutAccessoryView = callOut;
+	}
 	
 	
 	return annotationView;
