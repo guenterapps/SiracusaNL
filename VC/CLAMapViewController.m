@@ -40,6 +40,8 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
+	[super viewDidAppear:animated];
+	
 	if (self.places)
 	{
 		[self.mapView removeAnnotations:self.places];

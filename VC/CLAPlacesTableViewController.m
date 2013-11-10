@@ -11,6 +11,7 @@
 #import "CLAMainTableViewCell.h"
 #import "CLAMapViewController.h"
 #import "CLAAppDelegate.h"
+#import "CLADetailViewController.h"
 
 @interface CLAPlacesTableViewController ()
 
@@ -32,6 +33,9 @@
 	[self.navigationItem setRightBarButtonItem:buttonItem];
 }
 
+#pragma mark -
+#pragma mark view lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -51,6 +55,17 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+	if ([@"pushDetailViewController" isEqualToString:[segue identifier]])
+	{
+		NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+		
+		[(CLADetailViewController *)[segue destinationViewController] setPlace:self.store.places[indexPath.row]];
+		
+	}
 }
 
 #pragma mark - Table view data source
@@ -75,11 +90,6 @@
 	[cell setName:[place title]];
     
     return cell;
-}
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	NSLog(@"Selected: %i", indexPath.row);
 }
 
 

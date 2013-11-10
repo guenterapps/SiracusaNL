@@ -8,6 +8,8 @@
 
 #import "CLAPlaceStore.h"
 
+#define ORTI
+
 @implementation CLAPlaceStore
 
 @synthesize model = _model, coordinator = _coordinator, context = _context, places = _places;
@@ -55,16 +57,27 @@
 	if ([self.context countForFetchRequest:request error:&error] > 0 || error)
 		return;
 
-	CLAPlace *place = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:self.context];
 	
-	[place setTitle:@"aaa"];
-	[place setSubtitle:@"asda"];
-	
-	[place setEmail:@"sadas"];
-	
-	[place setImage:[UIImage imageNamed:@"test.jpg"]];
+	for (int i = 0; i < 20; i++)
+	{
+		CLAPlace *place = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:self.context];
 
-	[place setCoordinate:CLLocationCoordinate2DMake(37.060357849187263, 15.292802513913557)];
+		[place setTitle:@"aaa"];
+		[place setSubtitle:@"asda"];
+		
+		[place setEmail:@"sadas"];
+		
+		[place setImage:[UIImage imageNamed:@"test.jpg"]];
+
+		double delta = rand() % 999999;
+		
+		int sign = (delta - 555555) > 0 ? 1 : -1;
+		
+		double latitude = 37.060357849187263 + sign * (delta * pow(10, -9));
+		double longitude = 15.292802513913557 -sign * (delta * pow(10, -9));
+
+		[place setCoordinate:CLLocationCoordinate2DMake(latitude, longitude)];
+	}
 	
 	[self.context save:&error];
 	
