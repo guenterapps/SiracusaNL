@@ -86,7 +86,9 @@
 	
 	CLAPlace *place			= [self.places objectAtIndex:indexPath.row];
 	
-	UIImageView *fading = [[UIImageView alloc] initWithFrame:cell.bounds];
+	CGRect backFrame = CGRectMake(0.0, cell.bounds.size.height - 150, cell.bounds.size.width, 150);
+
+	UIImageView *fading = [[UIImageView alloc] initWithFrame:backFrame];
 	[fading setImage:[UIImage imageNamed:@"black_gradient"]];
 	
 	cell.backgroundColor	= [UIColor clearColor];
