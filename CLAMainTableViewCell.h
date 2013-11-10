@@ -14,6 +14,8 @@
 	IBOutlet UIImageView *_placeImage;
 }
 
+@property (nonatomic) UIImageView *placeImage;
+
 -(void)setName:(NSString *)name;
 -(void)setImage:(UIImage *)image;
 
