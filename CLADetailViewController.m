@@ -77,6 +77,7 @@
 		MKCoordinateRegion italia = [(CLAAppDelegate *)[UIApplication sharedApplication].delegate italia];
 		
 		[mapVC setPlaces:@[self.place]];
+		[mapVC setTitle:self.place.title];
 		[mapVC setRegion:italia navigateToDetailMap:YES];
 	}
 }
