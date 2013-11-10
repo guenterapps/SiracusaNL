@@ -11,7 +11,7 @@
 #import "CLAPlace.h"
 
 
-@interface CLADetailViewController : UITableViewController <MFMailComposeViewControllerDelegate>
+@interface CLADetailViewController : UITableViewController <MFMailComposeViewControllerDelegate, UITableViewDelegate>
 
 @property (nonatomic) CLAPlace *place;
 
@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *emailButton;
 @property (weak, nonatomic) IBOutlet UILabel *address;
 @property (weak, nonatomic) IBOutlet UILabel *distance;
+@property (weak, nonatomic) IBOutlet UITextView *descText;
 
 - (IBAction)sendMail:(id)sender;
 - (IBAction)callPhone:(id)sender;

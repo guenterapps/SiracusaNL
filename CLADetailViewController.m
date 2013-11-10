@@ -68,8 +68,7 @@
 }
 
 
-#pragma mark Mail sending methods
-
+#pragma mark Mail & Phone
 
 - (IBAction)sendMail:(id)sender
 {
@@ -88,8 +87,6 @@
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - Phone call methods
-
 - (IBAction)callPhone:(id)sender
 {
 	NSURL *phoneNumber = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", self.place.phoneNumber]];
@@ -98,6 +95,35 @@
 	
 }
 
+#pragma mark TableView delegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	
+	CGFloat height = 0.0;
+	CGRect a;
+	switch (indexPath.row)
+	{
+		case 0:
+			height = 270.0;
+			break;
+		case 1:
+			height = 55.0;
+			break;
+		case 2:
+			a = [self.descText frame];
+			
+			[self.descText setText:@""];
+			
+			//[self.descText setFrame:CGRectMake(a.origin.x, a.origin.y, a.size.width, 200.0)];
+			height = 150.0;
+			break;
+		default:
+			break;
+	}
+	
+	return height;
+}
 
 
 /*

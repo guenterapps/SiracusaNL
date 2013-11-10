@@ -137,20 +137,21 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="6Wy-hw-DpM">
-                                        <rect key="frame" x="0.0" y="270" width="320" height="50"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="55" id="6Wy-hw-DpM">
+                                        <rect key="frame" x="0.0" y="270" width="320" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6Wy-hw-DpM" id="RfC-UO-zXg">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="890-oR-cEW">
-                                                    <rect key="frame" x="7" y="2" width="306" height="46"/>
+                                                    <rect key="frame" x="7" y="5" width="306" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newMapIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="QcG-bn-8Ji">
-                                                            <rect key="frame" x="1" y="1" width="55" height="44"/>
+                                                            <rect key="frame" x="1" y="1" width="55" height="43"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="arrowMap.png" translatesAutoresizingMaskIntoConstraints="NO" id="3GE-vl-5UA">
@@ -175,21 +176,36 @@
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.093524042415854436" blue="0.25968851259302106" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="emn-Wq-ex3">
-                                        <rect key="frame" x="0.0" y="320" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="emn-Wq-ex3">
+                                        <rect key="frame" x="0.0" y="325" width="320" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="emn-Wq-ex3" id="UG0-ST-z5t">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uig-ix-bAI">
-                                                    <rect key="frame" x="7" y="3" width="306" height="39"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfv-Cc-HQe">
+                                                    <rect key="frame" x="7" y="5" width="306" height="132"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sega.png" translatesAutoresizingMaskIntoConstraints="NO" id="djP-V3-yS6">
+                                                            <rect key="frame" x="0.0" y="60" width="306" height="12"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        </imageView>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Testo" translatesAutoresizingMaskIntoConstraints="NO" id="uar-bW-ot5">
+                                                            <rect key="frame" x="0.0" y="0.0" width="306" height="90"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="1" green="0.1307020093392034" blue="0.14112987130520716" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -202,6 +218,7 @@
                     <navigationItem key="navigationItem" id="qeW-lR-1Qt"/>
                     <connections>
                         <outlet property="address" destination="966-cO-u8h" id="s5j-ks-evN"/>
+                        <outlet property="descText" destination="uar-bW-ot5" id="yio-fV-oEm"/>
                         <outlet property="distance" destination="9L4-j0-cIq" id="cPR-vO-aVA"/>
                         <outlet property="emailButton" destination="DvK-ze-75c" id="gyS-Uc-bJW"/>
                         <outlet property="emailImage" destination="WHr-X6-ead" id="sPc-0t-JY0"/>
@@ -232,6 +249,23 @@
             </objects>
             <point key="canvasLocation" x="-148" y="154"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Ej6-vo-jnw">
+            <objects>
+                <viewController id="faB-pN-9LL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qR8-r7-tFY"/>
+                        <viewControllerLayoutGuide type="bottom" id="z6i-lb-L2f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UFh-hf-amA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BDv-KO-vNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowMap.png" width="28" height="39"/>
@@ -239,6 +273,7 @@
         <image name="email-ko.png" width="28" height="12"/>
         <image name="newMapIcon.png" width="55" height="39"/>
         <image name="phone-ko.png" width="24" height="16"/>
+        <image name="sega.png" width="304" height="12"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
