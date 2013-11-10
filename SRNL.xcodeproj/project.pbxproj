@@ -148,6 +148,7 @@
 		AADAAF0B182F875D00641ECD /* backbtm.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF08182F875D00641ECD /* backbtm.png */; };
 		AADAAF0C182F875D00641ECD /* backbtm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF09182F875D00641ECD /* backbtm@2x.png */; };
 		AADAAF0D182F875D00641ECD /* backbtm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF09182F875D00641ECD /* backbtm@2x.png */; };
+		AADAAF0F182F905500641ECD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADAAF0E182F905500641ECD /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +251,7 @@
 		AADAAF02182F873200641ECD /* get-directions@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "get-directions@2x.png"; sourceTree = "<group>"; };
 		AADAAF08182F875D00641ECD /* backbtm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbtm.png; sourceTree = "<group>"; };
 		AADAAF09182F875D00641ECD /* backbtm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbtm@2x.png"; sourceTree = "<group>"; };
+		AADAAF0E182F905500641ECD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AADAAF0F182F905500641ECD /* MessageUI.framework in Frameworks */,
 				AADAAE78182EC4B700641ECD /* CoreData.framework in Frameworks */,
 				AAC8FB70182E9E6F00A94C5B /* CoreLocation.framework in Frameworks */,
 				AAC8FB6B182E898100A94C5B /* MapKit.framework in Frameworks */,
@@ -304,6 +307,7 @@
 		AA5C2FB7182E315C00E58FF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AADAAF0E182F905500641ECD /* MessageUI.framework */,
 				AADAAE77182EC4B700641ECD /* CoreData.framework */,
 				AAC8FB6F182E9E6F00A94C5B /* CoreLocation.framework */,
 				AAC8FB6A182E898100A94C5B /* MapKit.framework */,

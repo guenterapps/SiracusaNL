@@ -58,23 +58,29 @@
 		return;
 
 	
-	for (int i = 0; i < 20; i++)
+	for (int i = 1; i <= 20; i++)
 	{
 		CLAPlace *place = [NSEntityDescription insertNewObjectForEntityForName:@"Place" inManagedObjectContext:self.context];
 
-		[place setTitle:@"aaa"];
-		[place setSubtitle:@"asda"];
+		[place setTitle:[NSString stringWithFormat:@"Baretto %i", i]];
+		[place setSubtitle:[NSString stringWithFormat:@"Piazza Duomo %i", i]];
 		
-		[place setEmail:@"sadas"];
 		
-		[place setImage:[UIImage imageNamed:@"test.jpg"]];
+		
+		[place setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%i.jpg", i]]];
 
 		double delta = rand() % 999999;
 		
 		int sign = (delta - 555555) > 0 ? 1 : -1;
 		
+		if (sign > 0)
+		{
+			[place setEmail:@"mail@mail.it"];
+			[place setPhoneNumber:@"09318723729"];
+		}
+		
 		double latitude = 37.060357849187263 + sign * (delta * pow(10, -9));
-		double longitude = 15.292802513913557 -sign * (delta * pow(10, -9));
+		double longitude = 15.292802513913557 + sign * (delta * pow(10, -9));
 
 		[place setCoordinate:CLLocationCoordinate2DMake(latitude, longitude)];
 	}

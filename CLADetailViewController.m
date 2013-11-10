@@ -49,7 +49,7 @@
 	
 	self.imageDetail.image = self.place.image;
 	
-	if (self.place.email)
+	if (self.place.email && [MFMailComposeViewController canSendMail])
 	{
 		[self.emailButton setEnabled:YES];
 		[self.emailButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
@@ -64,7 +64,36 @@
 	}
 }
 
-#pragma mark - Table view data source
+
+#pragma mark Mail sending methods
+
+
+- (IBAction)sendMail:(id)sender
+{
+	MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
+
+	composer.mailComposeDelegate = self;
+	
+	[composer setToRecipients:@[self.place.email]];
+	
+	[self presentViewController:composer animated:YES completion:nil];
+}
+
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Phone call methods
+
+- (IBAction)callPhone:(id)sender
+{
+	NSURL *phoneNumber = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@", self.place.phoneNumber]];
+	
+	[[UIApplication sharedApplication] openURL:phoneNumber];
+	
+}
 
 
 
@@ -118,5 +147,6 @@
 }
 
  */
+
 
 @end
