@@ -62,6 +62,9 @@
 		[self.phoneButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
 		self.phoneImage.image = [UIImage imageNamed:@"phone"];
 	}
+	
+	self.address.text = self.place.subtitle;
+	self.distance.text = @"55 km";
 }
 
 

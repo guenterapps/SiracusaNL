@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 @property (weak, nonatomic) IBOutlet UIImageView *emailImage;
 @property (weak, nonatomic) IBOutlet UIButton *emailButton;
+@property (weak, nonatomic) IBOutlet UILabel *address;
+@property (weak, nonatomic) IBOutlet UILabel *distance;
 
 - (IBAction)sendMail:(id)sender;
 - (IBAction)callPhone:(id)sender;

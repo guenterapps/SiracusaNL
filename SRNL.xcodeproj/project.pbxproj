@@ -149,6 +149,10 @@
 		AADAAF0C182F875D00641ECD /* backbtm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF09182F875D00641ECD /* backbtm@2x.png */; };
 		AADAAF0D182F875D00641ECD /* backbtm@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF09182F875D00641ECD /* backbtm@2x.png */; };
 		AADAAF0F182F905500641ECD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AADAAF0E182F905500641ECD /* MessageUI.framework */; };
+		AADAAF12182F985C00641ECD /* arrowMap.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF10182F985C00641ECD /* arrowMap.png */; };
+		AADAAF13182F985C00641ECD /* arrowMap.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF10182F985C00641ECD /* arrowMap.png */; };
+		AADAAF14182F985C00641ECD /* arrowMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF11182F985C00641ECD /* arrowMap@2x.png */; };
+		AADAAF15182F985C00641ECD /* arrowMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AADAAF11182F985C00641ECD /* arrowMap@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +256,8 @@
 		AADAAF08182F875D00641ECD /* backbtm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backbtm.png; sourceTree = "<group>"; };
 		AADAAF09182F875D00641ECD /* backbtm@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "backbtm@2x.png"; sourceTree = "<group>"; };
 		AADAAF0E182F905500641ECD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/MessageUI.framework; sourceTree = DEVELOPER_DIR; };
+		AADAAF10182F985C00641ECD /* arrowMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowMap.png; sourceTree = "<group>"; };
+		AADAAF11182F985C00641ECD /* arrowMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrowMap@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,6 +399,8 @@
 			children = (
 				AADAAF07182F873A00641ECD /* DATA */,
 				AADAAED1182F866C00641ECD /* newMapIcon.png */,
+				AADAAF10182F985C00641ECD /* arrowMap.png */,
+				AADAAF11182F985C00641ECD /* arrowMap@2x.png */,
 				AADAAED2182F866C00641ECD /* newMapIcon@2x.png */,
 				AADAAE7D182F859000641ECD /* phone-ko.png */,
 				AADAAED7182F86A600641ECD /* black_gradient.png */,
@@ -543,10 +551,12 @@
 				AA5C3081182E545700E58FF8 /* background-nologo@2x.png in Resources */,
 				AADAAEEF182F86CF00641ECD /* buttonsBack-single@2x.png in Resources */,
 				AADAAE83182F859000641ECD /* phone-ko@2x.png in Resources */,
+				AADAAF14182F985C00641ECD /* arrowMap@2x.png in Resources */,
 				AADAAED3182F866C00641ECD /* newMapIcon.png in Resources */,
 				AADAAF03182F873200641ECD /* get-directions.png in Resources */,
 				AADAAECF182F860700641ECD /* email@2x.png in Resources */,
 				AADAAF05182F873200641ECD /* get-directions@2x.png in Resources */,
+				AADAAF12182F985C00641ECD /* arrowMap.png in Resources */,
 				AADAAEBD182F85D400641ECD /* 17.jpg in Resources */,
 				AAC8FB72182EAC3D00A94C5B /* pub.png in Resources */,
 				AADAAEA9182F85D400641ECD /* 7.jpg in Resources */,
@@ -617,6 +627,7 @@
 				AADAAEBA182F85D400641ECD /* 15.jpg in Resources */,
 				AA5C308A182E609E00E58FF8 /* test.jpg in Resources */,
 				AADAAEDA182F86A600641ECD /* black_gradient.png in Resources */,
+				AADAAF13182F985C00641ECD /* arrowMap.png in Resources */,
 				AADAAEAC182F85D400641ECD /* 8.jpg in Resources */,
 				AADAAEB8182F85D400641ECD /* 14.jpg in Resources */,
 				AADAAED0182F860700641ECD /* email@2x.png in Resources */,
@@ -631,6 +642,7 @@
 				AADAAEB6182F85D400641ECD /* 13.jpg in Resources */,
 				AADAAEE2182F86B600641ECD /* blackArrow.png in Resources */,
 				AADAAEE4182F86B600641ECD /* blackArrow@2x.png in Resources */,
+				AADAAF15182F985C00641ECD /* arrowMap@2x.png in Resources */,
 				AADAAEAE182F85D400641ECD /* 9.jpg in Resources */,
 				AADAAEA4182F85D400641ECD /* 4.jpg in Resources */,
 				AADAAEA2182F85D400641ECD /* 3.jpg in Resources */,
