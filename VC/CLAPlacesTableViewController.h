@@ -13,5 +13,6 @@
 @interface CLAPlacesTableViewController : UITableViewController
 
 @property (nonatomic) CLAPlaceStore *store;
+@property (nonatomic) NSArray *places;
 
 @end

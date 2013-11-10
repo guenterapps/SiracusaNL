@@ -43,12 +43,13 @@
 	UIImage *backgroundImage = [UIImage imageNamed:@"background-nologo"];
 	
 	self.tableView.backgroundView = [[UIImageView alloc] initWithImage:backgroundImage];
-	
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+	//we mantain a vc local cache of the data
+	if (!self.places)
+		self.places = self.store.places;
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,7 +74,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return  [self.store.places count];
+	return  [self.places count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -83,7 +84,7 @@
     CLAMainTableViewCell *cell = (CLAMainTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier
 																						 forIndexPath:indexPath];
 	
-	CLAPlace *place			= [self.store.places objectAtIndex:indexPath.row];
+	CLAPlace *place			= [self.places objectAtIndex:indexPath.row];
 	
 	cell.backgroundColor	= [UIColor clearColor];
 	[cell setImage:[place image]];

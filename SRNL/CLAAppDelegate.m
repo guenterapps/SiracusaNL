@@ -12,6 +12,7 @@
 @interface CLAAppDelegate ()
 
 -(MKCoordinateRegion)regionForDictionary:(NSDictionary *)dict;
+-(void)setupViewControllers;
 
 @end
 
@@ -24,27 +25,9 @@
 
 	self.store = [[CLAPlaceStore alloc] init];
 	
-	NSDictionary *coordinates = [[NSDictionary alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"DefaultMapZone" withExtension:nil]];
-	
-	NSDictionary *italia = [[NSDictionary alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"italia" withExtension:nil]];
-	
-	self.italia = [self regionForDictionary:italia];
-
-	//we manually load the storyboard to setup the first view controller
-	//we made the vc's semi-singleton to have a better user experience
-	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-	
-	self.window.rootViewController	= [storyBoard instantiateInitialViewController];
-	
-	self.placesTableViewController	= [(UINavigationController *)self.window.rootViewController viewControllers][0];
-	self.mapViewController			= [storyBoard instantiateViewControllerWithIdentifier:@"mapViewController"];
-	
-	[self.mapViewController setRegion:[self regionForDictionary:coordinates]];
-	
-	self.placesTableViewController.store	= self.store;
-	self.mapViewController.store			= self.store;
-	
 	[self.store preloadData];
+	
+	[self setupViewControllers];
 	
 	[self.window makeKeyAndVisible];
 	
@@ -53,6 +36,33 @@
 	
     return YES;
 }
+
+-(void)setupViewControllers
+{
+	NSDictionary *coordinates = [[NSDictionary alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"DefaultMapZone" withExtension:nil]];
+	
+	NSDictionary *italia = [[NSDictionary alloc] initWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"italia" withExtension:nil]];
+	
+	self.italia = [self regionForDictionary:italia];
+	
+	//we manually load the storyboard to setup the view controllers
+	//we made the vc's semi-singleton to mantain data and have a better user experience
+	UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+	
+	self.window.rootViewController	= [storyBoard instantiateInitialViewController];
+	
+	self.placesTableViewController	= [(UINavigationController *)self.window.rootViewController viewControllers][0];
+
+	self.mapViewController			= [storyBoard instantiateViewControllerWithIdentifier:@"mapViewController"];
+	
+	[self.mapViewController setRegion:[self regionForDictionary:coordinates]];
+	
+	self.placesTableViewController.store	= self.store;
+	self.mapViewController.store			= self.store;
+	
+
+}
+
 
 -(MKCoordinateRegion)regionForDictionary:(NSDictionary *)dict
 {

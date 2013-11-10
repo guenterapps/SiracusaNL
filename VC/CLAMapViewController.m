@@ -115,7 +115,7 @@
 	
 }
 
-#pragma mark --
+#pragma mark -
 #pragma mark MKMapView delegate
 
 -(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id < MKAnnotation >)annotation
