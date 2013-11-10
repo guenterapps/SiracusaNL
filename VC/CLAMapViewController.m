@@ -37,6 +37,11 @@
 
 }
 
+-(void)viewDidLoad
+{
+	[super viewDidLoad];
+}
+
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -120,6 +125,7 @@
 	[self.mapView setRegion:region];
 }
 
+//needed only to sample some data
 -(IBAction)getZone:(id)sender
 {
 	NSMutableDictionary *zoneToPoint = [NSMutableDictionary dictionary];
